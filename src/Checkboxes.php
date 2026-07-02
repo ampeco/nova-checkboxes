@@ -56,7 +56,7 @@ class Checkboxes extends Field
         ]);
     }
 
-    public function resolveAttribute($resource, $attribute = null)
+    public function resolveAttribute($resource, string $attribute): mixed
     {
         $value = data_get($resource, str_replace('->', '.', $attribute));
 
@@ -81,9 +81,9 @@ class Checkboxes extends Field
 
     protected function fillAttributeFromRequest(
         NovaRequest $request,
-        $requestAttribute,
-        $model,
-        $attribute
+        string $requestAttribute,
+        object $model,
+        string $attribute
     ) {
         if ($request->exists($requestAttribute)) {
             $data = json_decode($request[$requestAttribute]);
