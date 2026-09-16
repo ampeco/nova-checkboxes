@@ -10,10 +10,8 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000"
     },
     "devDependencies": {
-        "@inertiajs/inertia": "^0.11.0",
         "@vue/babel-plugin-jsx": "^1.1.1",
-        "axios": "^0.26.1",
-        "form-backend-validation": "^2.4.0",
+        "axios": "^1.18.1",
         "js-beautify": "^1.14.3",
         "laravel-mix": "^6.0.41",
         "postcss": "^8.3.11",
@@ -25,5 +23,8 @@
     },
     "dependencies": {
         "vue": "^3.2.33"
+    },
+    "resolutions": {
+        "webpack": "5.88.2"
     }
 }
